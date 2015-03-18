@@ -5,7 +5,7 @@ fpath=(
   /usr/local/share/zsh/site-functions
 )
 
-source "$HOME/.hashrc"
+source "$HOME/.sharedrc"
 
 # color term
 export CLICOLOR=1
@@ -87,10 +87,6 @@ setopt INC_APPEND_HISTORY
 export PSQL_EDITOR='vim -c"setf sql"'
 
 # aliases
-alias mv='nocorrect mv'       # no spelling correction on mv
-alias cp='nocorrect cp'
-alias mkdir='nocorrect mkdir'
-alias rspec='nocorrect rspec'
 alias ll="ls -l"
 alias la="ls -a"
 alias l.='ls -ld .[^.]*'
@@ -106,7 +102,6 @@ cdpath=(~ ~/src $DEV_DIR $HASHROCKET_DIR)
 
 # rvm-install added line:
 if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 cuke() {
   local file="$1"
