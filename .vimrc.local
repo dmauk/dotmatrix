@@ -15,12 +15,7 @@ set foldmethod=manual  "Lets you hide sections of code
 " --- auto indent script
 nnoremap ,f :set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab<CR>
 map ff  mzgg=G`z<CR>
-vnoremap f = 
-
-" --- Tab Commands
-nnoremap tn :tabnext<CR>
-nnoremap tp :tabprevious<CR>
-nnoremap `t :tabnew<CR>
+vnoremap f =
 
 " --- Vim controls
 inoremap jk <Esc>l
@@ -91,7 +86,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_working_path_mode = 'ra'
 
 " --- Tagbar
-nmap <F7> :TagbarToggle<CR> 
+nmap <F7> :TagbarToggle<CR>
 
 " --- NERDTree
 nmap <F8> :NERDTreeTabsToggle<CR>
@@ -105,3 +100,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" --- Airline
+let g:airline#extensions#tabline#enabled = 1

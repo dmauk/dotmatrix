@@ -1,10 +1,16 @@
+filetype off
 if $VIM_PLUGINS != 'NO'
-  runtime! autoload/pathogen.vim
-  if exists('g:loaded_pathogen')
-    execute pathogen#infect('~/.vimbundles/{}', '~/.vim/bundle/{}')
-  endif
+	if filereadable(expand("~/.vim/autoload/pathogen.vim"))
+		runtime! autoload/pathogen.vim
+		if exists('g:loaded_pathogen')
+			execute pathogen#infect('~/.vimbundles/{}', '~/.vim/bundle/{}')
+		else
+			echo "Failed autoloading plugiins"
+		endif
+	else
+		echo "pathogen file not readable"
+	endif
 endif
-
 syntax on
 filetype plugin indent on
 

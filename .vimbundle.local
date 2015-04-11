@@ -5,3 +5,6 @@ kien/ctrlp.vim
 jistr/vim-nerdtree-tabs
 nanotech/jellybeans.vim
 altercation/vim-colors-solarized
+bling/vim-airline
+Shougo/unite.vim
+majutsushi/tagbar
