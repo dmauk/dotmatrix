@@ -13,7 +13,7 @@ set shiftwidth=4    "Assists code formatting
 set foldmethod=manual  "Lets you hide sections of code
 
 " --- auto indent script
-nnoremap ,f :set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab<CR>
+nnoremap ,f :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab<CR>
 map ff  mzgg=G`z<CR>
 vnoremap f =
 
@@ -96,6 +96,8 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_php_checkers=['php', 'phpcs']
+let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -103,3 +105,10 @@ let g:syntastic_check_on_wq = 0
 
 " --- Airline
 let g:airline#extensions#tabline#enabled = 1
+
+" --- vim-eighties
+let g:eighties_enabled = 1
+let g:eighties_minimum_width = 80
+let g:eighties_extra_width = 0 " Increase this if you want some extra room
+let g:eighties_compute = 1 " Disable this if you just want the minimum + extra
+let g:eighties_bufname_additional_patterns = ['fugitiveblame'] " Defaults to [], 'fugitiveblame' is only an example. Takes a comma delimited list of bufnames as strings.

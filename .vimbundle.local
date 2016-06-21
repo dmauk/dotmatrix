@@ -8,3 +8,4 @@ altercation/vim-colors-solarized
 bling/vim-airline
 Shougo/unite.vim
 majutsushi/tagbar
+justincampbell/vim-eighties
