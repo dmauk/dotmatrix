@@ -38,7 +38,5 @@ if [ -f '/usr/local/etc/bash_completion.d/git-completion.bash' ]; then
   source '/usr/local/etc/bash_completion.d/git-completion.bash'
 fi
 
-#Aliases
-alias whatsmyip="wget http://ipinfo.io/ip -qO -"
 
 [ ! -f "$HOME/.bashrc.local" ] || . "$HOME/.bashrc.local"
